@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 1</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.25/vue.min.js"></script>
+</head>
+<body class="text-white" background="https://cutewallpaper.org/21/wallpaper-keren/795-Halloween-Hd-Wallpapers-Background-Images-Wallpaper-.png">
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <a class="navbar-brand text-white" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link text-white" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown text-white">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item text-white">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0 text-white" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+    <div id="app" class="form-group" >
+    <div class="row">
+        <div class="col-lg"> <br><br>
+            <p>Nama lengkap:</p>
+            <input type="text" v-model="nama_lengkap">
+            <p>Tempat,tanggal-lahir:</p>
+            <input type="text" v-model="ttl">
+            <p>Gender:</p>
+            <input type="radio" v-model="lesson" value="Male" >Male <br>
+            <input type="radio" v-model="lesson" value="Famele">Famele <br>
+            <input type="radio" v-model="lesson" value="Netral">Netral
+            <p>Agama:</p>
+            <select name="" id="" v-model="selected">
+                <option disabled value="" placeholder="pilih">Pilih</option>
+                <option value="Islam">Islam</option>
+                <option value="Kristen">Kristen</option>
+                <option value="Budha">Budha</option>
+                <option value="Konghucu">Konghucu</option>
+                <option value="Katolik">Katolik</option>
+            </select>
+            <p>Alamat:</p>
+            <p style="white-space: pre-line;"></p>
+            <br>
+            <textarea v-model="message" placeholder="add multiple lines"></textarea>
+            <p>No.hp</p>
+            <input type="text" v-model="no_hp">
+            <p>Hoby</p>
+            <input type="checkbox" v-model="hobi"  value="Sepak bola">Sepak bola <br>
+            <input type="checkbox" v-model="hobi"  value="Pencak silat">Pencak silat <br>
+            <input type="checkbox" v-model="hobi"  value="Gombalin cewek">Gombalin cewek  
+          </div>
+        <div class="col-lg"><br><br><br>       
+      <table  border="3">
+            <tr>
+               <th>Nama lengkap</th>
+               <th>Tempat-tanggal-lahir</th>
+               <th>Gender</th>
+               <th>Agama</th>
+               <th>Alamat</th>
+               <th>No.hp</th>
+               <th>Hoby</th>
+              </tr>
+              <tr>
+                  <td>{{ nama_lengkap }}</td>
+                  <td>{{ ttl }}</td>
+                  <td>{{ lesson }}</td>
+                  <td>{{ selected }}</td>
+                  <td>{{ message }}</td>
+                  <td>{{ no_hp }}</td>
+                  <td>{{ hobi }}</td>
+              </tr>
+           </table></div>
+        <div class="col-lg"></div>
+        </div>
+    </div>
+        <script>
+                 var vo = new Vue({
+            el: '#app',
+            data: {
+              hobi: [] 
+            }
+        });
+
+        </script>
+ 
+</body>
+</html>

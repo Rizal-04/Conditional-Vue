@@ -44,18 +44,24 @@
           </form>
         </div>
       </nav>
+      <div class="text-center text-white">
+        <h1>Form Pendaftaran</h1>
+      </div>
     <div id="app" class="form-group" >
+   <div class="container-fluid">  
     <div class="row">
-        <div class="col-lg"> <br><br>
-            <p>Nama lengkap:</p>
-            <input type="text" v-model="nama_lengkap">
-            <p>Tempat,tanggal-lahir:</p>
-            <input type="text" v-model="ttl">
-            <p>Gender:</p>
-            <input type="radio" v-model="lesson" value="Male" >Male <br>
-            <input type="radio" v-model="lesson" value="Famele">Famele <br>
-            <input type="radio" v-model="lesson" value="Netral">Netral
-            <p>Agama:</p>
+        <div class="col-lg card text-body"> <br><br>
+            <h4>Nama lengkap:</h4>
+             <input type="text" v-model="nama_lengkap">
+           <h2>Tempat,tanggal-lahir:</h2>
+              <input type="text" v-model="ttl">
+            <h4>Gender:</h4>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" v-model="lesson" value="Male" >Male 
+              <input type="radio" v-model="lesson" value="Famele">Famele 
+              <input type="radio" v-model="lesson" value="Netral">Netral
+            </div>
+            <h4>Agama:</h4>
             <select name="" id="" v-model="selected">
                 <option disabled value="" placeholder="pilih">Pilih</option>
                 <option value="Islam">Islam</option>
@@ -64,16 +70,18 @@
                 <option value="Konghucu">Konghucu</option>
                 <option value="Katolik">Katolik</option>
             </select>
-            <p>Alamat:</p>
+            <h4>Alamat:</h4>
             <p style="white-space: pre-line;"></p>
             <br>
             <textarea v-model="message" placeholder="add multiple lines"></textarea>
-            <p>No.hp</p>
+            <h4>No.hp</h4>
             <input type="text" v-model="no_hp">
-            <p>Hoby</p>
-            <input type="checkbox" v-model="hobi"  value="Sepak bola">Sepak bola <br>
-            <input type="checkbox" v-model="hobi"  value="Pencak silat">Pencak silat <br>
-            <input type="checkbox" v-model="hobi"  value="Gombalin cewek">Gombalin cewek  
+            <h4>Hoby</h4>
+              <div class="form-check">
+                <input type="checkbox" v-model="hobi"  value="Sepak bola">Sepak bola 
+                <input type="checkbox" v-model="hobi"  value="Pencak silat">Pencak silat 
+                <input type="checkbox" v-model="hobi"  value="Gombalin cewek">Gombalin cewek  
+              </div>
           </div>
         <div class="col-lg"><br><br><br>       
       <table  border="3">
@@ -98,6 +106,7 @@
            </table></div>
         <div class="col-lg"></div>
         </div>
+      </div> 
     </div>
         <script>
                  var vo = new Vue({
